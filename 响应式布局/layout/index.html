@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            padding:0;
+            margin:0;
+            background-color: #f1f1f1;
+        }
+        .container{
+            width:95%;
+            margin:10px auto;
+        }
+        .header{
+           width: 100%;
+            text-align: center;
+            padding:24px ;
+            background-color: #fff;
+            margin: 5px auto;      
+        }
+        .topnav {
+            background-color: #333;
+            width:100%;
+            overflow: hidden;
+        }
+        .topnav a{
+            text-align: center;
+            display: block;
+            float: left;
+            color:white;
+            padding:14px;
+            text-decoration: none;
+        }
+        .topnav a:hover{
+            color:black;
+            background-color: #ccc;
+        }
+        .topnav a:last-child{
+            float: right;
+        }
+        .row{
+            margin: 10px 0;
+        }
+        .left{
+            float:left;
+            width:75%;
+            padding-right: 20px;
+            
+        }
+        .right{
+            float:left;
+            width:25%;
+        }
+
+        .row::after{
+            content:"";
+            clear:both;
+            display: table;
+        }
+
+        .card{
+            background-color: #fff;
+            padding:20px 15px;
+            margin-bottom: 10px;
+        }
+        .left .img{
+            background-color: #666;
+            width: 100%;
+            height: 200px;
+        }
+
+        .right .img{
+            width:100%;
+            height: 100px;
+            background-color: #555;
+        }
+        .right .card a{
+            display: block;
+            background-color: #555;
+        }
+
+        .footer{
+            position: absolute;
+            padding: 24px;
+            width: 95%;
+            background-color: #ddd;
+            text-align: center;
+         
+        }
+        .footer h2{
+            margin: 0;
+        }
+     
+    @media screen and (max-width:800px) {
+        .right,.left,.topnav a{
+            width:100%;
+        }
+
+    }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>我的网页</h1>
+            <p>请重置浏览器大小</p>
+        </div>
+        <div class="topnav">
+            <a href="#">链接1</a>
+            <a href="#">链接2</a>
+            <a href="#">链接3</a>
+            <a href="#">链接4</a>
+        </div>
+        <div class="row">
+            <div class="left">
+                <div class="card">
+                    <h2>文章标题</h2>
+                    <p>2022-2-28</p>
+                    <div class="img">图片
+                        <img src="" alt="">
+                    </div>
+                    <p>我帧好看菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！</p>
+                </div>
+                <div class="card">
+                    <h2>文章标题</h2>
+                    <p>2022-2-27</p>
+                    <div class="img">
+                        <img src="" alt="">
+                    </div>
+                    <p>我太好看了</p>
+                </div>
+            </div>
+            <div class="right">
+                <div class="card">
+                    <h2>关于我</h2>
+                    <div class="img">
+                        <img src="" alt="">
+                    </div>
+                    <p>我太好看了</p>
+                </div>
+                <div class="card">
+                    <h2>热门文章</h2>
+                    <a><p>图片</p><img src="" ></a>
+                    <a><p>图片</p><img src="" ></a>
+                    <a><p>图片</p><img src="" ></a>
+                    <p>我太好看了</p>
+                </div>
+                <div class="card">
+                    <h2>关注我</h2>
+                    <P>关注我呀</P>
+                </div>
+    
+            </div>
+        </div>
+
+        <div class="footer">
+            <h2>底部区域</h2>
+        </div>
+
+    </div>
+    
+</body>
+</html>

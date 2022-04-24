@@ -1,0 +1,430 @@
+body{
+    max-width: 540px;
+    min-width: 320px;
+    margin: 0 auto;
+    font :normal 14px/1.5 tahhoma,"Lucida Grande",Verdana,"Microsoft Yahei",STXihei,hei;
+    color: #000;
+    background: #f2f2f2;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+
+}
+
+div{
+    box-sizing: border-box;
+}
+
+/*链接去掉下划线*/
+a{
+    text-decoration: none;
+    color: #222;
+}
+
+/* 给li求掉小点 */
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* 搜索模块 */
+.search-index{
+
+    /*定位：fixed，此时宽度要自定义。因为是固定的，不随着网页的滑动而被隐藏。*/
+    position:fixed;
+    top:0;
+
+
+    /* 盒子居中的做法，啥都不做，第二，确定left，然后让它移动自己宽度的一半，如果未知自己宽度，则利用translatex */
+    left:50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+
+    /* 宽度要自定义，因为fixed只与浏览器有关。与父级没有关系，宽度定义的时候使用 */
+    width: 100%;
+    max-width: 540px;
+    min-width: 320px;  
+    height: 44px;
+
+
+    border-top: 1px solid #ccc;
+    border-bottom:1px solid #ccc;
+    background-color: #F6F6F6;
+    display:flex;
+}
+
+.search-index .search{
+    /* 26px是原本的高度加上border，如果要让文字居中，lineheight=height-border*2 */
+
+    height: 26px; 
+    line-height: 24px;
+    border: 1px solid #ccc;
+
+    flex:1;
+    margin: 8px 10px;
+    
+    
+    font-size: 12px;
+    color: #666;
+
+    /* 前面搜索框的宽度加上margin */
+    padding-left: 22px;
+
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    /* 固定在窗口，不会随着窗口下拉而影响它。*/
+
+    position: relative;
+}
+.search ::before{
+    content: "";
+    width: 12px;
+    height: 13px;
+
+    position: absolute;
+    top: 5px;
+    left: 5px;
+
+    background:url(../img/sprite.png) no-repeat -60px -280px;
+    background-size:104px auto;
+
+}
+
+.search-index .user{
+    width: 44px;
+    height: 42px;
+    background-color:rgb(250, 241, 250);
+    font-size: 12px;
+    text-align: center;   
+    color:#2eaae0;
+}
+
+
+.user::before {
+    content:"";
+    width: 23px;
+    height: 22px;
+    display: block;
+    background:url(../img/sprite.png) no-repeat -59px -195px;
+    background-size:104px auto;
+    margin:5px auto 0;
+
+}
+
+
+/*焦点图模块*/
+.focus {
+    padding-top: 44px;
+}
+.focus img{
+    width: 100%;   
+}
+
+/* */
+.local-nav {
+    height: 64px;
+    display: flex;
+    background-color: #FFF;
+    border-radius:8px;
+    margin: 3px 4px;
+}
+
+.local-nav li{
+    flex:1;
+}
+.local-nav a{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    font-size: 12px;
+}
+.local-nav li [class^="local-nav-icon"]{
+    width: 32px;
+    height: 32px;
+    margin-top: 8px;
+    background: url(../img/localnav_bg.png) no-repeat 0px 0px ;
+    background-size:32px auto ;
+}
+.local-nav li .local-nav-icon-icon2{
+    background-position: 0 -32px;
+}
+.local-nav li .local-nav-icon-icon3{
+    background-position: 0 -64px;
+}
+
+.local-nav li .local-nav-icon-icon4{
+    background-position: 0 -96px;
+}
+.local-nav li .local-nav-icon-icon5{
+    background-position: 0 -128px;
+}
+
+/* 主导航栏 */
+nav{
+     /* 外面有小圆角，里面没有，那么就把外面溢出的隐藏掉 */
+    overflow: hidden;
+    border-radius: 8px;
+    margin: 0 4px 3px;
+
+}
+.nav-common{   
+    height: 88px;
+    display: flex;
+}
+.nav-common:nth-child(2){
+    margin: 3px 0;
+}
+/*颜色渐变必须添加私有前缀*/
+.nav-common:nth-child(1){
+    background:-webkit-linear-gradient(left,#FA5956,#FA9A4D);
+}
+.nav-common:nth-child(2){
+    background:-webkit-linear-gradient(left,#4B8FED,#53BCED);
+}
+.nav-common:nth-child(3){
+    background:-webkit-linear-gradient(left,#34C2AA,#6BD457);
+}
+
+.nav-items{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+}
+.nav-items a{
+    flex:1;
+    text-align: center;
+    line-height: 44px;
+    color: #FFF;
+    font-size: 14px;
+    /* 文字阴影 */
+    text-shadow: 1px 1px rgba(0,0,0,0.2);
+}
+/*mav-item的第一个a*/
+.nav-items a:nth-child(1){
+border-bottom: 1px solid #FFF;
+
+}
+/*第一个nav-item的a*/
+.nav-items:nth-child(1) a {
+    border: 0;
+    background: url(../img/hotel.png) no-repeat bottom center;
+    background-size: 121px auto;
+    
+}
+
+/* #logo2{
+
+    background: url(../img/sprite.png) no-repeat bottom center -1px -298px;
+    background-size: 104px auto;
+    
+}
+#logo3{
+    background: url(../img/hotel.png) no-repeat bottom center;
+    background-size: 104px auto;
+
+} */
+
+
+/*选择后面两个元素*/
+.nav-items:nth-child(n+2){
+    border-left:1px solid #FFF;
+
+}
+
+/* subnav */
+.subnav-entry{
+    border-radius: 8px;
+    background-color: #fff;
+    margin: 0 4px;
+    display: flex;
+    flex-wrap: wrap;
+
+
+}
+.subnav-entry li{
+    /* 可以对于父级宽度 */
+    flex:20%;
+
+}
+.subnav-entry a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+[class^="subnav-icon"]{
+    width: 28px;
+    height: 28px;
+    background-color: #2eaae0;
+    margin-top: 4px;
+    background: url(../img/subnav-bg.png) no-repeat 0px 1px;
+    background-size: 28px auto;
+
+}
+.subnav-icon-icon2{
+    background: url(../img/subnav-bg.png) no-repeat 0px -28px;
+    background-size: 28px auto;
+}
+.subnav-icon-icon3{
+    background: url(../img/subnav-bg.png) no-repeat 0px -62px;
+    background-size: 28px auto;
+}
+.subnav-icon-icon4{
+    background: url(../img/subnav-bg.png) no-repeat 0px -320px;
+    background-size: 28px auto;
+}
+
+.subnav-icon-icon5{
+    background: url(../img/subnav-bg.png) no-repeat 0px -100px;
+    background-size: 28px auto;
+}
+
+
+.subnav-icon-icon6{
+    background: url(../img/subnav-bg.png) no-repeat 0px -160px;
+    background-size: 28px auto;
+}
+.subnav-icon-icon7{
+    background: url(../img/subnav-bg.png) no-repeat 0px -195px;
+    background-size: 28px auto;
+}
+.subnav-icon-icon8{
+    background: url(../img/subnav-bg.png) no-repeat 0px -130px;
+    background-size: 28px auto;
+}
+
+
+.subnav-icon-icon9{
+    background: url(../img/subnav-bg.png) no-repeat 0px -225px;
+    background-size: 28px auto;
+}
+
+.subnav-icon-icon10{
+    background: url(../img/subnav-bg.png) no-repeat 0px -285px;
+    background-size: 28px auto;
+}
+
+/* 销售模块 */
+.sales-box{
+    background-color: #fff;
+    border-top: 1px solid #bbb;
+    margin: 3px 4px;
+    border-radius: 8px;
+}
+
+.sales-hd{
+    height: 44px;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+}
+
+.sales-hd h2{
+ text-indent: -999px;
+ overflow: hidden;
+}
+
+.sales-hd h2::before{
+    position: absolute;
+    top:8px;
+    left: 10px;
+    content: "";
+    width: 79px;
+    height: 20px;
+    background:url(../img/hot.png) no-repeat 0px -10px;
+    background-size: 79px auto;
+}
+.sales-hd a{
+    position :absolute;
+    right: 5px;
+    top: 0px;
+    background: -webkit-linear-gradient(left,#FF506C,#FF6BC6);
+    color:#f2f2f2;
+    border-radius: 8px;
+    padding: 3px 20px 3px 10px;
+   }
+
+.sales-hd a::after{
+    content: "";
+    position: absolute;
+    top:9px;
+    right: 9px;
+    width: 7px;
+    height: 7px;
+    border-right: 2px solid #fff;
+    border-top:2px solid #fff;
+    transform: rotate(45deg);
+}
+
+   
+   
+
+.row{
+    display: flex;
+
+}
+.row a{
+    flex:1;
+    border-bottom: 1px solid #eee;
+}
+.row a:first-child{
+    border-right: 1px solid #eee;
+  
+}
+.row img{
+    width:100%;
+}
+
+.footer{
+    height: 60px;
+    margin:3px 4px;
+    border-radius: 8px;
+    display: flex;
+    background-color:#fff;
+
+}
+.footer li{
+    flex:1;
+}
+.footer a{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    
+}
+.footer li [class^=footer-icon]{
+    height: 18px;
+    width: 18px;
+    background: url(../img/sprite.png) no-repeat -60px -153px;
+    background-size: 104px auto;
+    margin: 8px;
+}
+.footer li .footer-icon-icon2{
+    background: url(../img/sprite.png) no-repeat -60px -173px;
+    background-size: 104px auto;
+}
+
+.footer li .footer-icon-icon3{
+    background: url(../img/sprite.png) no-repeat -60px -310px;
+    background-size: 104px auto;
+}
+
+.liscence{
+    color: rgb(138, 134, 134);
+    position: absolute;
+    width: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+}
+
+.nav-row {
+    display: flex;
+    justify-content: center;
+    height: 24px;
+
+}
+
+.nav-row :not(span:last-child)::after{
+    content: "|";
+}

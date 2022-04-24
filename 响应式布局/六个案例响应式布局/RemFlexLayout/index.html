@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="top">
+        <img src="" alt="">
+    </div>
+    <div class="middle">
+        <ul>
+            <li>
+                <div><img src="" class="logo"/></div>
+                <div>慕课精品成长课</div>
+                <div><img src="" class="logo"/> </div>
+            </li>
+        </ul>
+    </div>
+    <div class="bottom">
+        <div><img src="" alt=""></div>
+        <div><img src="" alt=""></div>
+    </div>   
+</body>
+<script>
+    var c=()=>{
+        let w=document.documentElement.clientWidth;
+        let n=(20*(w/320)>40?40+"px":(20*(w/320)+"px"));
+        document.documentElement.style.fontSize=n;
+    }
+    window.addEventListener("load",c);
+    window.addEventListener("resize",c);
+</script>
+</html>

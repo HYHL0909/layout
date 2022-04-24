@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+} 
+body {
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    margin: 0;
+    padding:0;
+    width: 100%;
+    height: auto;
+    background-color: #eee;
+    list-style-type:none;  
+    /*auto是有必要才显示滚动条，scroll是无论如何都有,防止导航太多*/
+    overflow: auto;
+
+    /*内联元素没有高度，因此只有定位才有高度，固定再一侧*/
+    position:fixed;
+
+   
+}
+
+
+ li a {
+    text-decoration: none;
+    display: block;
+    padding: 8px 16px;
+    color: #222;
+    text-align: center;
+}
+
+li a:hover {
+    color: white;
+    background-color: #666;
+}
+
+
+li:first-child a {
+    color: white;
+    background-color: rgb(77, 165, 103);
+}
+
+  

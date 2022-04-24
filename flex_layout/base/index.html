@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用于熟悉flex布局</title>
+    <style>
+
+
+        section{
+            width:60%;
+            height: 150px;
+            background-color: pink;
+            margin: 0 auto;
+            display: flex;     
+        }
+        section div:nth-child(1){
+            width: 100px;
+            height: 150px;
+            background-color:pink;
+        }
+        section div:nth-child(2){
+            height: 150px;
+            background-color:skyblue;
+            flex:1;
+            
+        }
+        section div:nth-child(3){
+            width: 100px;
+            height: 150px;
+            background-color:yellow;
+        }
+        
+
+        span{ 
+            /* 行元素设置宽高是没有用的是会随着内容改变，但是用了flex布局就有用了  */
+            width:150px;
+            height: 100px;
+            background-color:pink;
+            margin:2px;
+            margin-right: 5px;
+            flex:1;
+        }
+        
+        p {
+            display:flex;
+            width:80%;
+            background-color: pink;
+            height:160px;
+            margin: 100px auto;
+
+        }
+        p span{
+            flex:1;
+            height:160px;
+            margin:0px 5px;
+            background-color: skyblue;
+        }
+        p span:nth-child(2){
+            flex:2;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+    <p>
+        <span></span><span></span><span></span>
+    </p>
+    
+</body>
+</html>

@@ -1,0 +1,15 @@
+任何一个容器都可以使用flex布局 
+原本使用的是float加定位，但是十分麻烦。
+flex+position共同控制。就是一部分宽高限制了，那么剩下的看flex占几份。
+
+剩余空间的分配方式，justify-content
+
+子对象的属性：
+flex-basic：子元素的基准值（宽度）设置了之后width将会失效 30%是父元素的1/3；也可以用像素。
+flex-grow：1，说明要扩充，剩余部分占的部分。有剩余空间菜肴扩充
+flex-shrink:0 （不允许缩小）默认是按比例缩小
+flex 是简写 grow shrink basic
+
+rem root em rem=16px，那么 1rem=16px;
+em是相对于父级的字体，而父级可能还有父级，具有级联继承。
+

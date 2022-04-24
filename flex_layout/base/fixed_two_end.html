@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实现自适应，两边固定，中间拉伸</title>
+    <style>
+        #div0{
+            display:flex ;
+        }
+        #div0 div:first-child{
+            background-color: pink;
+            flex:0 0 50px;
+        }
+        #div0 div:nth-child(2){
+            background-color: skyblue;
+            flex:auto;
+        }
+
+        #div0 div:last-child{
+            background-color: pink;
+            flex:0 0 50px;
+        }
+
+        @media screen and (max-width:500px) {
+            #div0 div:nth-child(2){
+            background-color: yellowgreen;
+        }           
+        }
+      
+    </style>
+</head>
+<body>
+    <div id="div0">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+</html>

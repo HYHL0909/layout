@@ -1,0 +1,53 @@
+/* 浏览器自带的margin去掉 */
+html, body{
+    margin: 0;
+}
+.main{
+    /* 如果没有box-sizing，那么默认就是，会爆开 */
+    width: 100%;
+    box-sizing: border-box;
+    padding: .72rem;
+    
+}
+.item{
+    width:100%;
+    height: 2.5333rem;
+    /* grid布局做法，行 */
+    display: grid;
+    grid-template-columns: .4133rem auto  .8667rem;
+    /* 竖方向放在中心 */
+    align-items: center;
+
+    border-bottom: .0267rem solid rgba(235,235,235,1);
+
+}
+.left img{
+    width:100%;
+}
+.right{
+    font-size: .36rem;
+    font-family: SF Pro Text;
+    font-weight: 400;
+    color:rgba(123,122,124,1);
+}
+
+.middleTop{
+    font-size :.3867rem;
+    font-family: SF Pro Text;
+    font-weight: 600;
+    color:rgba(55,53,57,1);
+}
+
+.middleBottom{
+    font-size :.36rem;
+    font-family: SF Pro Text;
+    font-weight: 400;
+    color:rgba(123,122,124,1);
+
+}
+.middle{
+    padding-left: 0.8rem;
+    display:grid;
+    grid-template-rows: .5067rem .48rem;
+    row-gap: .0667rem;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水平导航栏</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #eee;
+            width: 100%;
+            position: fixed;
+            top:0;
+
+        }
+
+        li{
+            float: left;
+            border-right:1.5px solid #666;
+          
+        }
+        
+        li:last-child{
+            border-right:none;
+        }
+
+        li a {
+            text-decoration: none;
+            display: block;
+            padding: 8px 16px;
+            color: #222;
+        }
+        
+
+        li:first-child a {
+            color: white;
+            background-color: rgb(97, 160, 116);
+        }
+
+        li:last-child {
+            float: right;
+        }
+
+        li a:hover {
+
+            color: white;
+            background-color: #666;
+        }
+        @media screen and (min-device-width:400px) and (max-device-width:500px) {
+            #div0 div:nth-child(2){
+            background-color: yellowgreen;
+        }           
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="nav-bar">
+        <li><a href="#">主页</a></li>
+        <li><a href="#">新闻</a></li>
+        <li><a href="#">联系</a></li>
+        <li><a href="#">关于</a></li>
+    </ul>
+
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .long_form{
+           display: flex;
+           flex-direction: column;   
+       }
+       .long_form div{
+           flex:1;
+           display: flex;
+           margin-top: 10px;         
+       }
+       .input{
+           display: flex;
+           justify-content: flex-start;
+       }
+       .input label{
+           width: 100px;
+           text-align: right;
+       }
+       .input input{
+           flex:1;
+       }
+
+    </style>
+</head>
+<body>
+    <form action="">
+        <div class="long_form">
+            <div class="input">
+                <label for="">姓名：</label>
+                <input type="text">
+            </div>
+            <div class="input">
+                <label for="">请输入密码：</label>
+                <input type="text">
+            </div>
+        </div>
+    </form>
+
+</body>
+</html>

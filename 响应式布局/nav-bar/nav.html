@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="common.css">
+    <title>垂直导航栏</title>
+    <style>
+        
+        @media screen and (min-width:400px) and (max-width:900px) {
+            li:not(:last-child) {
+                float: left;
+                border-right: 1.5px solid #666;
+            }
+           
+            li:last-child {
+                float: right;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <ul class="nav-bar">
+        <li><a href="#">主页</a></li>
+        <li><a href="#">新闻</a></li>
+        <li><a href="#">联系</a></li>
+        <li><a href="#">关于</a></li>
+    </ul>
+</body>
+</html>

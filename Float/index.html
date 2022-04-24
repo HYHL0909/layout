@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*box-sizing：border-box
+        默认时content-box，这种情况下的宽度就只有content的width，不包括边距，这样在响应式布局里非常不友好，比如我们想要的是一个占25%，一个占75%，但是由于这只是内容的width，因此他们不会出现在同一行里。可以试着20% 75% ，可能就能容纳了。*/
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin:0;  
+        }
+        li{
+            list-style-type: none;
+        }
+        li a{
+            text-decoration: none;       
+        }
+        .topmenu{
+            padding: 0;
+            margin: 0;
+            background-color: #777;
+            /*如果没有这个overflow就没有办法显示里面的li，因为子元素的高度超过父元素li的高度，导致溢出，因此我们使用overflow：auto。*/
+            overflow: auto;
+        }
+        .topmenu li{
+            float: left;    
+        }
+        .topmenu li a{
+            color:aliceblue;
+            padding:15px ;
+            /* 内联元素无法设置高度，padding的上下值 margin等 */
+            display:block;
+        }
+        .topmenu li a:hover{
+            background-color: #222;
+        }
+        .topmenu li:first-child{
+            background-color: #4CAF50;
+        }
+        .column{
+            padding:15px;
+            float:left;
+        }
+
+    
+        .clearfix{
+            /* 清除浮动：防止底部扶到上面，但是为啥要table */
+            content:"";
+            clear:both;
+            display: table;
+            
+        }
+        .columnSidemenu{    
+            float:left;
+            width: 25%;
+            padding-right: 25px; 
+        
+        }
+        .columnContent{
+            margin-top:15px;
+            float:left;
+            width: 75%;
+        }
+        .columnSidemenu li{
+            margin:5px 0;
+            background-color: #eee;
+        
+        }
+        .columnSidemenu li:nth-child(2) a{
+            background-color: #008CBA;
+            color:white;
+        }
+
+        .columnSidemenu li a{
+            color:#444;
+            background-color: #eee;
+            padding:10px;
+            display:block;
+       
+        }
+
+
+        .columnSidemenu li a:hover{
+            background-color: #555;
+            color:white;
+        }
+
+        .columnContent .header{
+            background-color: #2196F3;
+            color:white;
+            text-align: center;
+            padding: 15px;
+
+        }
+
+        div.footer{
+            background-color: #444;
+            color:white;
+            text-align: center;
+            position:fixed;
+            bottom:0;
+            width:100%;
+        }
+
+    
+    </style>
+</head>
+
+<body>
+    <ul class="topmenu">
+        <li><a hre="#home" >主页</a></li>
+        <li><a href="#news">新闻</a></li>
+         <li><a href="#contact">联系我们</a></li>
+         <li><a href="#about">关于我们</a></li>
+    </ul>
+    
+    <div class="clearfix">
+            <div class="columnSidemenu">
+                <ul>
+                    <li><a href="#">The Flight</a></li>
+                    <li><a href="#" >The City</a></li>
+                    <li><a href="#">The Island</a></li>
+                    <li><a href="#">The Food</a></li>
+                    <li><a href="#">The People</a></li>
+                    <li><a href="#">The History</a></li>
+                    <li><a href="#">The Oceans</a></li>
+                </ul>
+            </div>
+            <div class="columnContent">
+                <div class="header">
+                    <h1>The City</h1>
+                </div>
+                    <h1>Chania</h1>
+                    <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
+                    <p>You will learn more about responsive web pages in a later chapter.</p>
+                
+            </div>
+    
+       </div>
+    
+     <div class="footer">
+            <p>底部文本</p>
+     </div>
+    
+</body>
+</html>
